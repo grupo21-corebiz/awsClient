@@ -14,5 +14,11 @@
       "sender": "vtex.orders-broadcast",
       "topics": ["cancel", "order-created"]
     }
+  },
+  "routes": {
+    "aws": {
+      "path": "/_v/aws",
+      "public": true
+    }
   }
 }

@@ -2,6 +2,7 @@ import {
   ClientsConfig,
   LRUCache,
   Service,
+  method,
   ServiceContext,
   RecorderState,
   EventContext,
@@ -9,6 +10,7 @@ import {
 
 import { Clients } from './clients'
 import { allStates } from './middlewares/allStates'
+import { awsMid } from './middlewares/awsMid'
 import { someStates } from './middlewares/someStates'
 
 const TIMEOUT_MS = 800
@@ -59,4 +61,9 @@ export default new Service({
     allStates,
     someStates,
   },
+  routes: {
+    aws: method({
+      GET: [awsMid]
+    })
+  }
 })

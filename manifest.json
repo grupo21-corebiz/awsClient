@@ -1,9 +1,9 @@
 {
-  "name": "orders-feed-example",
-  "vendor": "vtex",
+  "name": "desafiofinal-corebiz21",
+  "vendor": "hiringcoders202121",
   "version": "0.2.1",
-  "title": "Orders Feed Example",
-  "description": "Boilerplate app for receving order status events",
+  "title": "AWS Client",
+  "description": "",
   "categories": [],
   "dependencies": {},
   "builders": {
@@ -15,6 +15,13 @@
   },
   "credentialType": "absolute",
   "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7n2b3cjwuf.execute-api.us-east-1.amazonaws.com",
+        "path": "*"
+      }
+    },
     {
       "name": "colossus-fire-event"
     },
